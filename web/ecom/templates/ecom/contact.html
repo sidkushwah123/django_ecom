@@ -1,0 +1,31 @@
+{% extends 'ecom/basic.html' %}
+
+{% block title%}contact{% endblock %}
+
+{% block body %} 
+<div class="container my-4">
+    <h2>Contact Us :</h2>
+    <form action="/shop/contact/" method="POST" >
+      {% csrf_token %}
+        <div class="form-group">
+          <label for="Name">NAME</label>
+          <input type="text" class="form-control" id="Name" Name="Name" placeholder="ENTER YOUR NAME">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" Name="email" id="email" placeholder="ENTER YOUR Email">
+          </div>
+        <div class="form-group">
+            <label for="phone">MOBILE NO</label>
+            <input type="tel" class="form-control" Name="phone" id="phone" placeholder="ENTER YOUR MOBILE NO">
+          </div>
+        <div class="form-group">
+          <label for="desc">How may we help you?</label>
+          <textarea class="form-control" Name="desc" id="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'ecom/basic.html' %}
+
+{% block title%}{{product.product_name}} - Fresho, world!{% endblock %}
+{% block css %} 
+    <style>
+        .ccc{
+            margin-top: 90px;
+            border: 2px solid  rgb(44, 44, 44)!important;
+            
+        }
+        .ccc1{
+            padding: 18px;
+        }
+        .ccc4{
+            padding: 18px 18px 18px 50px ;
+        }
+       
+    </style>
+{% endblock %}
+
+{% block body %} 
+<div class="container ccc">
+    <div class="row ccc1">
+        <div class="col-md-4 ccc2">
+            <div class="row">
+                 <img src="/media/{{product.image}}" width="350px" height="400px" alt="">
+            </div>
+            <div class="row my-5 ml-3">
+                <button  class="btn btn-primary mx-3">Buy Now</button>
+                <button  class="btn btn-primary ">Add To Cart</button>
+            </div>
+        </div>
+        <div class="col-md-8 ccc4">
+            <h3 style="color: rgb(43, 41, 41);">{{product.product_name}}</h3>
+            <h2 class="mt-3 "><b>RS {{product.price}}</b></h2>
+            <p class="mt-3" ><b style="color: green;">Warranty -: </b>{{product.Warranty}}</p>
+            <p class="mt-5" ><b>Description -: </b>{{product.desc}}</p>
+            <h5 class="mt-4" style="color: green;">More Details  -:</h5>
+            <div class="mt-4"style="font-size: 20px;" >
+            <p class="mt-2"  ><b>color -: </b>{{product.color}}</p>
+            <p class="mt-2" ><b>brand -: </b>{{product.brand}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
